@@ -27,11 +27,6 @@ public class MemberInfo extends BaseEntity {
   @Column(length = 100)
   private String email;
 
-  public MemberInfo(int age, String email) {
-    this.age = age;
-    this.email = email;
-  }
-
   public void changeDate(MemberDto memberDto) {
     this.age = memberDto.getMemberInfoDto().getAge();
     this.email = memberDto.getMemberInfoDto().getEmail();

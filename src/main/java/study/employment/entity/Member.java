@@ -10,10 +10,10 @@ import java.util.List;
 
 @Entity
 @Getter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(of = {"id", "username", "password"})
-@Builder
 public class Member extends BaseEntity {
 
   @Id

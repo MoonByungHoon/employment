@@ -22,7 +22,7 @@ public abstract class BaseEntity {
   @LastModifiedDate
   private LocalDateTime lastModifiedDate;
 
-//  시큐리티 이후 구현
+//  시큐리티 공부 이후 구현
 //  @CreatedBy
 //  @Column(updatable = false)
 //  private String createdBy;

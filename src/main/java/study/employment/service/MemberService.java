@@ -40,10 +40,14 @@ public class MemberService {
     }
   }
 
-  public Member findById(final Long id) {
-
-    return memberRepository.findById(id)
+  public MemberDto findById(final Long id) {
+    Member findMember = memberRepository.findById(id)
             .orElseThrow(() -> new NoSuchElementException("찾으시는 아이디가 없습니다."));
+
+    MemberDto memberDto = new MemberDto();
+    memberDto.toDto(findMember);
+
+    return memberDto;
   }
 
   public List<Member> findAll() {
