@@ -43,7 +43,7 @@ public class BoardApicontroller {
   public ResponseEntity<?> findAll(@PathVariable(name = "offset") final Long offset,
                                    @PathVariable(name = "limit") final Long limit) {
     QueryResults<Board> results = boardService.findAll(offset, limit);
-
+    
     return ResponseEntity.ok().body(results);
   }
 }
