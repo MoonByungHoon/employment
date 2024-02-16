@@ -32,7 +32,7 @@ public class InitDb {
       for (int i = 1; i <= 10; i++) {
         em.persist(new Member(String.valueOf(i), String.valueOf(i)));
         em.persist(new Board("title" + i, "content" + i, memberRepository.findById((long) i).orElseThrow(() -> new EntityNotFoundException("자동 실패"))));
-//        dasdasd
+//        dasdasd:
       }
 
       em.flush();
